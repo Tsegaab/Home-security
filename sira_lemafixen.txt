@@ -1,0 +1,6 @@
+cp -R * '/media/tekes/248A0E588A0E2740/AllOsInOne/VB/final project/Home-security/c/ye_nashurdin/'
+`````````````````````````````````````````````````````````````````````````````````````````````````
+gcc recorder.c -o recorder         `pkg-config --cflags opencv`         `pkg-config --libs opencv` -lpthread
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+

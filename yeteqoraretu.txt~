@@ -1,0 +1,12 @@
+OPencv Project
+^^^^^^^^^^^^^^
+    Commpling and runing C code
+    ***************************
+        $ gcc stream_server.c -o stream_server \
+        `pkg-config --cflags opencv` \
+        `pkg-config --libs opencv` -lpthread
+            ./stream_server
+        $ gcc stream_client.c -o stream_client \
+        `pkg-config --cflags opencv` \
+        `pkg-config --libs opencv` -lpthread
+            ./stream_client 

@@ -15,7 +15,36 @@ Linux_commands
         sudo mkdir /media/$USER
         sudo chown $USER.$USER /media/$USER
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+    
+    To install BeatBox 0.7 in Ubuntu 12.04,ubuntu 12.10 and Linux
+    *************************************************************
+        sudo add-apt-repository ppa:sgringwe/beatbox
+        sudo apt-get update
+        sudo apt-get install beatbox
+        ...If you want to make BeatBox available in sound menu do the following tips, open terminal then install dconf-tool
+        sudo apt-get install dconf-tool
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    Install PyDev
+    *************
+        1. Run Eclipse and then go to Help | Software Updates | Find and Install…
+        2. In the Feature Updates window, select Search for new features to install and click Next.
+        3. In the Install window, select New Remote Site.
+        4. In the New Update Site window, specify the following:
+        ...Name: PyDev
+        ...URL: http://update-production-pydev.s3.amazonaws.com/pydev/updates/site.xml
+        5. In the Search Results window, select both PyDev Extensions and click Next.
+        6. In the Feature License window, agree to the license agreement and click Next.
+        7. Configure the Python interpreter by going to Window | Preferences | Pydev | Interpreter – Python.
+        8. In the Python interpreters section, click New.
+        9. Locate your Python interpreter (e.g., /usr/bin/python).        
+       
+   Installing ADT on eclipse
+   *************************
+        1. download ans extract android sdk
+        2. Help > Install new software> Add and install ADT from http://dl-ssl.google.com/android/eclipse/        
+        3. Windows > preference > locate your Android SDK starter package.
+        
 OPencv Project
 ^^^^^^^^^^^^^^
     Commpling and runing C code
@@ -23,7 +52,8 @@ OPencv Project
         $ gcc stream_server.c -o stream_server \
         `pkg-config --cflags opencv` \
         `pkg-config --libs opencv` -lpthread
-        
+            ./stream_server
         $ gcc stream_client.c -o stream_client \
         `pkg-config --cflags opencv` \
         `pkg-config --libs opencv` -lpthread
+            ./stream_client 
