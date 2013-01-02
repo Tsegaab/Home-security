@@ -1,0 +1,46 @@
+https://github.com/rigers/Camera.git
+
+Most IP cameras provide a basic video stream in Motion-JPEG format — basically a constantly updating stream of JPEG-compressed bitmap files. MotionJpegImageView provides a simple interface for creating and displaying these streams within an Android and iOS application.
+
+most people will want to secure their video feeds with a username and password, and often encrypt the stream using HTTPS. 
+
+we use peer-to-peer videostreaming 
+Peer-to-peer video streaming systems offer the same advantages as peer-
+to-peer file transfer networks but face additional challenges since data transfer
+needs to occur continuously to avoid playout interruptions. This is particularly
+difficult since the peers are connected to the Internet by links which may have
+different capacity and reliability. Moreover, data delivery paths may simply
+disappear without prior notice, e.g., when a peer leaves the broadcast. This
+challenging environment is a perfect field of application for recent advances
+in compression, streaming, and networking and a catalyst for new progress.
+Remarkably, functioning solutions have emerged and the research community
+now expects that in the future peer-to-peer video streaming system will be
+used for large-scale live television distribution over the Internet.
+
+Recording
+~~~~~~~~~
+we are using .ogg file format since it is designed to provide for efficient streaming and manipulation of high quality digital multimedia.
+
+
+OpenCv is Intel’s Open Source Computer Vision library.
+
+The name OpenCV has become synonymous with computer vision, but what is OpenCV? OpenCV is a collection of software algorithms put together in a library to be used by industry and academia for computer vision applications and research. OpenCV started at Intel in the mid 1990s as a method to demonstrate how to accelerate certain algorithms in hardware. In 2000, Intel released OpenCV to the open source community as a beta version, followed by v1.0 in 2006. In 2008, Willow Garage took over support for OpenCV and immediately released v1.1.
+
+
+I use Berkeley Sockets (Berkeley sockets (or BSD sockets) is a computing library with an application programming interface (API) for internet sockets and Unix domain sockets, used for inter-process communication (IPC).
+As the API has evolved with little modification from a de facto standard into part of the POSIX specification, POSIX sockets are basically Berkeley sockets.) that is widely available on Unix-like systems for the networking code.
+
+The Operating System is Unix-like. Therefore we're using POSIX Threads (POSIX Threads, usually referred to as Pthreads, is a POSIX standard for threads. The standard, POSIX.1c, Threads extensions (IEEE Std 1003.1c-1995), defines an API for creating and manipulating threads.
+Implementations of the API are available on many Unix-like POSIX-conformant operating systems such as FreeBSD, NetBSD, OpenBSD, GNU/Linux, Mac OS X and Solaris. DR-DOS and Microsoft Windows implementations also exist: within the SFU/SUA subsystem which provides a native implementation of a number of POSIX APIs, and also within third-party packages such as pthreads-w32,[1] which implements pthreads on top of existing Windows API.) and Berkeley Sockets.
+
+
+Only one client connected at a time.
+The client knows the width and the height of the expected frame.
+The client receives grayscaled (single channel) frames.
+
+
+The server part consists of two parts.1, One who read the video input in a loop, and the 2, other waits for the client to connect and send the video frames.
+
+In the diagram above, we see two threads running on the server side: Frame Grabber and Stream Server. The input is taken from a webcam, but you can use other resources too, like an avi file.
+
+Frame Grabber grabs a frame from the webcam and stores it to a global variable img. Stream Server waits for a client to connect. Once the connection has established, it sends img to the client repeatedly whenever a newer version of img is available.

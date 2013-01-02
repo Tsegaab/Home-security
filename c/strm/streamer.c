@@ -27,16 +27,13 @@ int main() {
 	socketfd = socket(AF_INET, SOCK_STREAM, 0);
 	printf("Socket Creation: %s\n", strerror(errno));
 
-	filefd = open(
-
-			"/home/tekes/Documents/compilation-ogg-q4.ogg",
-			O_RDONLY);
+	filefd = open("/home/teketel/Desktop/Billboard.webm",O_RDONLY);
 	printf("File open: %s\n", strerror(errno));
 
 	bzero(&sockserv, sizeof(sockserv));
 	sockserv.sin_family = AF_INET;
 	sockserv.sin_addr.s_addr = INADDR_ANY;
-	sockserv.sin_port = htons(8510);
+	sockserv.sin_port = htons(8511);
 
 	/*sockintermediate.sin_family = AF_INET;
 	 inet_pton(AF_INET,"127.0.0.1",(void*)&sockintermediate.sin_addr.s_addr);
@@ -62,7 +59,7 @@ int main() {
 	int xcnt = 0;
 
 	while (1) {
-		cnt = read(filefd, buff, 1024);
+		cnt = read(filefd, buff, 2048);
 		printf("Read %d bytes 1 from the file : %s\n", cnt, strerror(errno));
 		if (xcnt == 7)
 			break;
@@ -104,7 +101,7 @@ int main() {
 	lseek(filefd, 0, 0);
 
 	while (1) {
-		cnt = read(filefd, buff, 1024);
+		cnt = read(filefd, buff, 2048);
 		printf("Read %d bytes 2 from the file : %s\n", cnt, strerror(errno));
 		if (xcnt == 7)
 			break;

@@ -1,0 +1,30 @@
+Linux_commands
+^^^^^^^^^^^^^^
+    Configuring opencv for ubuntu to python
+    ***************************************
+        sudo apt-get update
+        sudo pat-get upgrade
+        sudo apt-get install cmake
+        sudo apt-get install python-numpy python-opencv
+        sudo apt-get install python-dev
+        sudo apt-get install ia32-libs
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Can't mount any partition - ACL error
+    ************************************
+        sudo mkdir /media/$USER
+        sudo chown $USER.$USER /media/$USER
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+OPencv Project
+^^^^^^^^^^^^^^
+    Commpling and runing C code
+    ***************************
+        $ gcc stream_server.c -o stream_server \
+        `pkg-config --cflags opencv` \
+        `pkg-config --libs opencv` -lpthread
+            ./stream_server
+        $ gcc stream_client.c -o stream_client \
+        `pkg-config --cflags opencv` \
+        `pkg-config --libs opencv` -lpthread
+            ./stream_client 
