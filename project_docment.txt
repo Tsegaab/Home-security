@@ -46,3 +46,5 @@ In the diagram above, we see two threads running on the server side: Frame Grabb
 Frame Grabber grabs a frame from the webcam and stores it to a global variable img. Stream Server waits for a client to connect. Once the connection has established, it sends img to the client repeatedly whenever a newer version of img is available.
 
 Streams Motion JPEG rather than raw data
+
+Assume that we have an original 24 bpp RGB image called current frame (image), a grayscale copy of it (currentFrame) and previous video frame also gray scaled (backgroundFrame). First of all, let's find the regions where these two frames are differing a bit. For the purpose we can use Difference and Threshold filters.

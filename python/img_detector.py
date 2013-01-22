@@ -1,7 +1,8 @@
-http://blog.jozilla.net/2008/06/27/fun-with-python-opencv-and-face-detection/
+#http://blog.jozilla.net/2008/06/27/fun-with-python-opencv-and-face-detection/
 
+import cv
 import sys
-from CVtypes import cv
+#from CVtypes import cv
  
 def detect(image):
     image_size = cv.GetSize(image)

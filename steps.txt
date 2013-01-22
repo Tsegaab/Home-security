@@ -39,11 +39,70 @@ Linux_commands
         8. In the Python interpreters section, click New.
         9. Locate your Python interpreter (e.g., /usr/bin/python).        
        
-   Installing ADT on eclipse
-   *************************
+    Installing ADT on eclipse
+    *************************
         1. download and extract android sdk
-        2. Help > Install new software> Add and install ADT from http://dl-ssl.google.com/android/eclipse/        
-        3. Windows > preference > locate your Android SDK starter package.
+        2. cd to androis sdk directory abd type tools/android update sdk --no-ui --no-https
+        3. Help > Install new software> Add and install ADT from http://dl-ssl.google.com/android/eclipse/        
+        4. Windows > preference > locate your Android SDK starter package.
+        5. ...to install the platform packs "tools/android update sdk --no-ui --no-https"
+    Install Ubuntu Tweak via PPA:
+    *****************************
+        ...Open terminal and enter the following command:
+        sudo add-apt-repository ppa:tualatrix/ppa  
+        sudo apt-get update 
+        sudo apt-get install ubuntu-tweak
+    Installation myunity:
+    ***********************
+        ...For Ubuntu 11.10 use the following ppa to install MyUnity:
+        sudo add-apt-repository ppa:myunity/ppa
+        sudo apt-get update
+        sudo apt-get install myunity
+        ...For Ubuntu12.04 you can install MyUnity 3.0 using the following command or from the software center:
+        sudo apt-get install myunity
+        
+    Install Cheese for your cam and 30- Gimp Image editor:
+    ******************************************************
+        sudo add-apt-repository ppa:matthaeus123/mrw-gimp-svn 
+        sudo apt-get update 
+        sudo apt-get install gimp gimp-data gimp-plugin-registry gimp-data-extras
+       
+    Install Deluge- The best torrent client
+    ***************************************
+        sudo add-apt-repository ppa:deluge-team/ppa
+        sudo apt-get update
+        sudo apt-get install deluge
+        
+    Video editor is Openshot,  the best existing actually for Linux
+    ****************************************************************
+        sudo add-apt-repository ppa:jonoomph/openshot-edge 
+        sudo apt-get update 
+        sudo apt-get install openshot openshot-doc    
+    
+    Install Cinnamon
+    *****************
+        ...Cinnamon is a Gnome 3 fork that allow you to have a panel at the bottom with a classic Menu, this is useful for people that want to use Ubuntu with a classic Bottom Menu.
+        sudo add-apt-repository ppa:gwendal-lebihan-dev/cinnamon-stable
+        sudo apt-get update
+        sudo apt-get install cinnamon
+        
+    Installing Medibuntu
+    *********************
+        ...Medibuntu is a packaging project dedicated to distributing software that cannot be included in Ubuntu for various reasons, related to geographical variations in      legislationMedibuntu regarding intellectual property, security and other issues. by adding Medibuntu repositories you will be able to install many softwares like Google-Earth , opera ,Win32codecs
+        Copy paste this command > "sudo -E wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo apt-get --quiet update && sudo apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo apt-get --quiet update"
+        ...if you want to add medibuntu packages to Ubuntu software center, 
+        sudo apt-get install app-install-data-medibuntu apport-hooks-medibuntu
+        
+	Enable Hibernate
+	****************
+		...frist Testing Hibernate
+		sudo pm-hibernate
+		
+	Compiling and running C and C++ code
+	************************************
+	    
+
+
         
 OPencv Project
 ^^^^^^^^^^^^^^

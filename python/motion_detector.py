@@ -7,7 +7,16 @@ def diffImg(t0, t1, t2):
   d2 = cv2.absdiff(t1, t0)
   return cv2.bitwise_or(d1, d2)
 
-
+def facedetect(img):
+    gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    gray = cv2.equalizeHist(gray)
+    faces = cascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=2, minSize=(80, 80), flags = cv2.cv.CV_HAAR_SCALE_IMAGE)
+    if len(faces) == 0:
+        return []
+    else:
+        for f in faces:
+            print f
+        return faces
 
 cam = cv2.VideoCapture(0)
 s, img = cam.read()
