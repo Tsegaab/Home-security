@@ -92,9 +92,11 @@ class MotionDetectorInstantaneous():
     def somethingHasMoved(self):
         nb=0 #Will hold the number of black pixels
 
-        for x in range(self.height): #Iterate the hole image
-            for y in range(self.width):
+        for x in range(self.height): #Iterate the hole image 
+            for y in range(self.width):                
                 if self.res[x,y] == 0.0: #If the pixel is black keep it
+                    #print "x, y = " + str(self.res)
+                    #print "x, y = " + str(self.res[x, y])
                     nb += 1
         avg = (nb*100.0)/self.nb_pixels #Calculate the average of black pixel in the image
 
